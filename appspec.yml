@@ -3,3 +3,8 @@ os: linux
 files:
   - source: /
     destination: /opt/youtube-dl
+hooks:
+  ApplicationStart:
+    - location: deploy_hooks/deploy.sh
+      timeout: 1800
+      runas: root
